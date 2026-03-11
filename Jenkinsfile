@@ -23,5 +23,11 @@ pipeline {
         sh 'python3 main.py'       // run your python script
       }
     }
+    stage('Staging1') {
+      steps {
+        sh 'python3 --version'     // optional: verify python installed
+        sh 'python3 bin.py'
+      }
+    }
   }
 }
